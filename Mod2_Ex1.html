@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div><input type="button" value="Criar" onclick="create();"></div>
+</body>
+<script>
+    var pageBody = document.getElementsByTagName('body')[0];
+    var aDiv = document.createElement('div');
+    aDiv.style.height = '10px';
+    pageBody.appendChild(aDiv);
+
+    function create() {
+        var newDiv = document.createElement('div');
+        newDiv.style.height = '110px';
+        var newSquare = document.createElement('div');
+        newSquare.style.backgroundColor = 'red';
+        newSquare.style.height = '100px';
+        newSquare.style.width = '100px';
+        pageBody.appendChild(newDiv);
+        newDiv.appendChild(newSquare);
+       
+        //console.log(newSquare);
+    }
+</script>
+</html>
