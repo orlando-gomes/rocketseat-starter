@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Documento</title>
+</head>
+<body onload="listar()">
+    
+    <input type="text" name="nome" id="nome" value="texto">
+
+    <button onclick="adicionar()">Adicionar</button>
+    <script>
+                
+        function listar() {
+            var nomes = ["Diego", "Gabriel", "Lucas"];
+            var lista = document.createElement('ul');
+            var body = document.getElementsByTagName('body')[0];
+            body.append(lista);
+            for (let i = 0; i < nomes.length; i++) {
+                var item = document.createElement('li');
+                item.innerHTML = nomes[i];
+                lista.append(item);
+            }
+        }
+
+        function adicionar() {
+            var entrada = document.getElementById('nome');
+            console.log(entrada.value);// aqui *****************
+            entrada.value = "";
+        }
+
+    </script>
+</body>
+</html>
