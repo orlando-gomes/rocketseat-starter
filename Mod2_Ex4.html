@@ -27,8 +27,15 @@
 
         function adicionar() {
             var entrada = document.getElementById('nome');
-            console.log(entrada.value);// aqui *****************
-            entrada.value = "";
+            //console.log(entrada.value);// aqui *****************
+            if (entrada.value) {
+                var item = document.createElement('li');
+                item.innerHTML = entrada.value;
+                entrada.value = "";
+                var lista = document.getElementsByTagName('ul')[0];
+                lista.append(item);
+            }
+            
         }
 
     </script>
