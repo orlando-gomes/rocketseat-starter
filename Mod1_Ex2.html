@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function pares(x,y) {
+            // para fazer o código mais robusto, supomos que os números não estarão em ordem
+            var minimo = Math.min(x,y);
+            var maximo = Math.max(x,y);
+            var numeros = "";
+            for (let i = minimo; i <= maximo; i++) {
+                if (i%2==0) {
+                    numeros= numeros+" "+i;
+                }
+                
+            }
+            console.log(numeros);
+        }
+
+        pares(117,2);
+    </script>
+</body>
+</html>

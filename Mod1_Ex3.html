@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // com foreach
+        function temHabilidade(skills) {
+            result = false;
+            skills.forEach(item => {
+                if (item==='Javascript') {
+                    result=true;
+                }
+            });
+            return result;
+        }
+        
+        // com loop for comum
+        function temHabilidade2(skills) {
+            for (let i = 0; i < skills.length; i++) {
+                if (skills[i]==='Javascript') {
+                    result = true;
+                }
+                return result;
+            }
+        }
+
+        var skills = ['ReactJS', 'Javascript', 'React Native'];
+        console.log(temHabilidade(skills));
+        console.log(temHabilidade2(skills));
+    </script>
+</body>
+</html>

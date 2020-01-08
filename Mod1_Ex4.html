@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function experiencia(anos) {
+            var resultado = '';
+            if (anos < 0) {
+                resultado = 'Escolha um número positivo!'
+            } else if ((0<=anos)&&(anos<=1)) {
+                resultado = 'Iniciante';
+            } else if ((2<=anos)&&(anos<=3)) {
+                resultado = 'Intermediário';
+            } else if ((4<=anos)&&(anos<=6)) {
+                resultado = 'Avançado';
+            } else {
+                resultado = 'Jedi Master';
+            }
+            return resultado;
+        }
+
+        console.log('Minha experiência é '+ experiencia(-1));
+        console.log('Minha experiência é '+ experiencia(0));
+        console.log('Minha experiência é '+ experiencia(1));
+        console.log('Minha experiência é '+ experiencia(2));
+        console.log('Minha experiência é '+ experiencia(3));
+        console.log('Minha experiência é '+ experiencia(4));
+        console.log('Minha experiência é '+ experiencia(5));
+        console.log('Minha experiência é '+ experiencia(6));
+        console.log('Minha experiência é '+ experiencia(7));
+        console.log('Minha experiência é '+ experiencia(8));
+    </script>
+</body>
+</html>

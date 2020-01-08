@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+            var usuarios = [
+                {   
+                    nome: 'Diego',
+                    habilidades: ['Javascript', 'ReactJS', 'Redux']
+                },
+                {
+                    nome: 'Gabriel',
+                    habilidades: ['VueJS', 'Ruby on Rails', 'Elixir']
+                }
+            ]
+
+            //com foreach
+            function introduce(person) {
+                var greetings = 'O '+person.nome+' possui as habilidades:';
+                person.habilidades.forEach(skill => {
+                    greetings = greetings+' '+skill+',';
+                });
+                console.log(greetings.substring(0,greetings.length-1));
+            }
+
+            function introduce2(person) {
+                var greetings = 'O '+person.nome+' possui as habilidades: '+
+                person.habilidades[0]+', '+person.habilidades[1]+' ,'+
+                person.habilidades[2];
+                console.log(greetings);
+            }
+
+            introduce(usuarios[0]);
+            introduce(usuarios[1]);
+            introduce2(usuarios[0]);
+            introduce2(usuarios[1]);
+
+    </script>
+
+</body>
+</html>
