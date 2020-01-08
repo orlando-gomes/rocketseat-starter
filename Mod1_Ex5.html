@@ -28,6 +28,7 @@
                 console.log(greetings.substring(0,greetings.length-1));
             }
 
+            // sem foreach
             function introduce2(person) {
                 var greetings = 'O '+person.nome+' possui as habilidades: '+
                 person.habilidades[0]+', '+person.habilidades[1]+' ,'+
@@ -35,10 +36,19 @@
                 console.log(greetings);
             }
 
+            // com join
+            function introduce3(person) {
+                var greetings = 'O '+person.nome+' possui as habilidades: ';
+                var complement = person.habilidades.join(', ');
+                console.log(greetings+complement);
+            }
+
             introduce(usuarios[0]);
             introduce(usuarios[1]);
             introduce2(usuarios[0]);
             introduce2(usuarios[1]);
+            introduce3(usuarios[0]);
+            introduce3(usuarios[1]);
 
     </script>
 
