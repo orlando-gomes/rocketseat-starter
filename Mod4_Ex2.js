@@ -19,7 +19,14 @@ function search() {
         })
         myPromise
         .then(function (obj) {
-            console.log(obj);
+            var lista = document.getElementById('lista');
+            lista.innerHTML = '';
+            var item;
+            for (const ob of obj) {
+                item = document.createElement('li');
+                item.innerHTML = ob.full_name;
+                lista.append(item);
+            }
         })
         .catch(function (msg) {
             console.log(msg);
